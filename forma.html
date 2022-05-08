@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="forma.css">
+  <title id="title">Login</title>
+</head>
+
+<body>
+
+<div class="hero">
+  <div class="form-box">
+    <div class="button-box">
+      <div id="btn"></div>
+      <button type="button" class="toggle-btn" onclick="login()">Login</button>
+      <button type="button" class="toggle-btn" onclick="register()">Register</button>
+    </div>
+    <div class="social-icons">
+      <img src="images/fb.png" alt="">
+      <img src="images/tw.png" alt="">
+      <img src="images/gp.png" alt="">
+    </div>
+    <form action="index.html" id="login" class="input-group">
+      <input type="text" class="input-field" placeholder="Username" required>
+      <input type="password" class="input-field" placeholder="Enter password" required>
+      <input type="checkbox" class="check-box"><span>Remember password</span>
+      <button type="submit" class="submit-btn" style="color: #fff; font-size: 18px;">Login</button>
+    </form>
+    <form action="index.html" id="register" class="input-group">
+      <input type="text" class="input-field" id="name" placeholder="Username" required>
+      <input type="email" class="input-field" placeholder="Email" required>
+      <input type="password" class="input-field" id="password" placeholder="Enter password" required>
+      <input type="checkbox" class="check-box"><span>I agree with terms & conditions</span>
+      <button type="submit" class="submit-btn" style="color: #fff; font-size: 18px;">Register</button>
+    </form>
+  </div>
+
+
+</div>
+
+<script>
+  let x = document.getElementById("login");
+  let y = document.getElementById("register");
+  let z = document.getElementById("btn");
+  let name = document.getElementById("name").value;
+  let password = document.getElementById("password").value;
+
+  function register() {
+    x.style.left = "-400px";
+    y.style.left = "50px";
+    z.style.left = "110px";
+    document.getElementById("title").innerText = "Register";
+  }
+
+  function login() {
+    x.style.left = "50px";
+    y.style.left = "450px";
+    z.style.left = "0";
+    document.getElementById("title").innerText = "Login";
+
+    // if (name && password) {
+    //   if (name === "florim99" && password === "Limi.123") {
+    //     let selected = document.getElementById("login");
+    //     selected.setAttribute('action', 'index.html');
+    //   } else {
+    //     alert("Username pr password is incorrect, please try again!");
+    //   }
+    // } else {
+    //   alert("Please enter the fields.");
+    // }
+  }
+
+
+</script>
+
+</body>
+
+</html>
